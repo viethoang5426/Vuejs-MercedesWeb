@@ -1,22 +1,39 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import TrangChu from '../TrangChu.vue'
+import WedNavbar from '../components/WedNavbar' 
+import WedFooter from '../components/WedFooter'
+import WedContents from '../components/WedContents'
+import WebTableCar from '../components/WebTableCar'
 
 Vue.use(VueRouter)
 
 const routes = [
+  
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: '/trangchu',
+    name: 'TrangChu',
+    component: TrangChu
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
+    path: '/webnavbar',
+    name: 'WedNavbar',
+    component: WedNavbar
+  },
+  {
+    path: '/wedfooter',
+    name: 'WedFooter',
+    component: WedFooter
+  },
+  {
+    path: '/wedcontents',
+    name: 'WedContents',
+    component: WedContents
+  },
+  {
+    path: '/wedtablecar',
+    name: 'WebTableCar',
+    component: WebTableCar
   }
 ]
 
